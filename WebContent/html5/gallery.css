@@ -16,22 +16,29 @@
 .gallery-show-box > img
 {
 	display:block;
-	margin-top: 25px;
+	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	height: 250px;
-	border:solid 4px #000000;
--moz-border-radius: 73px;
--webkit-border-radius: 73px;
-border-radius: 73px;
+	border: solid 4px #000000;
+	-moz-border-radius: 73px;
+	-webkit-border-radius: 73px;
+	border-radius: 73px;
+	
+	transform-origin:right top; /* 중심을 오른쪽위로 바꿈 */
+	transform: rotate(0deg);
+	
+	opacity:0.5;
+	transition-property:rotate, opacity, margin-top;
+	transition-duration:0s, 1s, 1s; /* 여러개 줄수있다 */
 }
 
-.gallery-show-box > img:HOVER{
-	transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
--webkit-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
--moz-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
--o-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
--ms-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
+.gallery-show-box>img:HOVER {
+	transform-origin:right top;
+	transform: rotate(-10deg)/*  scaleX(-1) */;
+	
+	opacity:1;
+	margin-top:0px; 
 }
 
 .gallery-pic-box

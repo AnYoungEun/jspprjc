@@ -1,0 +1,79 @@
+﻿#logo
+{
+    position:absolute;
+    left:0px;
+    top:23px;
+    z-index:1;
+}
+
+#main-menu
+{
+    position:absolute;
+    left:200px;
+    top:27px;
+}
+
+#lecture-search-form
+{
+    position:absolute;
+    left:468px;
+    top:21px;
+}
+
+#member-menu
+{
+    position:absolute;
+    right:0px;
+    top:20px;
+}
+
+#my-menu
+{
+    position:absolute;
+    right:0px;
+    top:40px;
+}
+
+
+/*----<컨텐트 배치 영역>----------------------------------------------------------------*/
+
+
+#logo-footer-container {
+    float:left;
+    width:205px;
+    margin-top:20px;
+}
+
+#company-info-container {    
+    float:left;
+    margin-top:20px;
+    padding-left:35px;
+}
+
+#copyright
+{
+    margin-top:15px;
+}
+
+#quick-menu {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+}
+
+/*--------------------------------*/
+
+.aside-menu-group-title
+{
+    margin-top:43px;
+}
+
+.aside-main-menu
+{
+    margin-top:45px;
+}
+
+.aside-menu
+{
+    margin-top:30px;
+}

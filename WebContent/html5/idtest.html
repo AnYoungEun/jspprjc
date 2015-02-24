@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>영으니</title>
+<script>
+function printresult(){
+	var x,y;
+	
+	x = prompt("x값", 0);
+	y = prompt("y값", 0);
+	
+	x = parseInt(x);
+	y = parseInt(y);
+	
+	result.value = x+y; // document 컨테이너에서 꺼내씀
+}
+// resultsss.onclick = printresult; // rewult가 정의되지않았다고 오류남
+
+function init(){ //초기화 함수
+	result.onclick = printresult;
+}
+
+window.onload = init; // body부분이 로드된후 init를 실행하겠음
+
+</script>
+</head>
+<body>
+
+<input type="button" value="c" id = "result"> <!-- onXXX -> 사용자 이벤트 -->	
+
+</body>
+</html>

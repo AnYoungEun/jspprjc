@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>영으니</title>
+<script>
+function add(a,b) // arguments별칭
+{
+	return arguments[0]+arguments[1];
+}
+
+/* var sum = add(2,3); */
+var sum = add(4,5,"hello",3,4,5,6,78);
+</script>
+</head>
+<body>
+
+<input type="button" onclick="alert(sum);"> <!-- onXXX -> 사용자 이벤트 -->	
+
+</body>
+</html>

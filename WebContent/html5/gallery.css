@@ -1,0 +1,108 @@
+.gallery
+{
+	width:500px;
+	height:400px;
+	 
+}
+
+.gallery-show-box
+{
+	width:100%;
+	height:300px;
+	background:red;
+	overflow: hidden;
+}
+
+.gallery-show-box > img
+{
+	display:block;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 250px;
+	border:solid 4px #000000;
+-moz-border-radius: 73px;
+-webkit-border-radius: 73px;
+border-radius: 73px;
+}
+
+.gallery-show-box > img:HOVER{
+	transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
+-webkit-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
+-moz-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
+-o-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
+-ms-transform: rotate(13deg) scale(0.949) skew(0deg) translate(-2px);
+}
+
+.gallery-pic-box
+{
+	width:inherit;
+	height:100px;
+	background:blue;
+}
+
+.gallery-pic-list
+{
+	height:100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: inline-block;
+	border: 1px solid red;
+	width: 2000px;
+	
+}
+
+.gallery-pic-clipper{
+	position: relative;
+	width:450px;
+	height:100%;
+	float: left;
+	overflow: hidden;
+}
+
+.gallery-pic-item
+{
+	float:left;
+	width:88px;
+	height:98px;
+	border:1px solid #000000;
+	
+}
+
+.gallery-prev-button
+{
+	float:left;
+	width:25px;
+	height:inherit;
+	background:pink;
+	
+}
+
+
+.gallery-next-button
+{
+	float:left;
+	width:25px;
+	height:inherit;
+	background:pink;
+}
+
+.gallery-pic
+{
+	width:100%;
+	height:100%;
+}
+
+.gallery-pic:HOVER{
+	transform: rotate(2deg) scale(0.949) skew(0deg) translate(-2px);
+-webkit-transform: rotate(2deg) scale(0.949) skew(0deg) translate(-2px);
+-moz-transform: rotate(2deg) scale(0.949) skew(0deg) translate(-2px);
+-o-transform: rotate(2deg) scale(0.949) skew(0deg) translate(-2px);
+-ms-transform: rotate(2deg) scale(0.949) skew(0deg) translate(-2px);
+}
+
+.gallery-file{
+	display: none;
+}
+

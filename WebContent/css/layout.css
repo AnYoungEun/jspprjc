@@ -1,0 +1,69 @@
+﻿#header
+{
+    
+    height:70px;
+}
+
+.header-item-container 
+{
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#body
+{
+    margin-top:1px;
+    border-top:5px solid #8CBA34;
+    min-height:300px;
+}
+
+#footer
+{
+    background:#313131;
+    height:150px;
+}
+
+.content-wrapper
+{    
+    width:960px;
+    height:inherit;
+    min-height:inherit;
+    margin-left:auto;
+    margin-right:auto;    
+}
+
+#header .content-wrapper 
+{    
+    position: relative;
+}
+
+#quick-menu
+{
+    width:100%;
+    height:50px;
+    background:yellow;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*-------------------------------------------------------------*/
+
+.aside-menu-group
+{
+   min-height: inherit;
+   width: 205px;   
+   float:left;
+   background:url("../images/bg-aside-title.png") no-repeat left top;
+}

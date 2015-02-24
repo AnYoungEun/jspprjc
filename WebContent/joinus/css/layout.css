@@ -1,0 +1,43 @@
+﻿@import url(../../css/layout.css);
+
+#visual
+{
+    background:#313131 url("../../images/bg-visual.png") no-repeat center;
+    border-top:3px solid #8CBA34;
+    height:171px;
+}
+
+#body
+{
+    margin-top:1px;
+    border-top:5px solid #8CBA34;
+    min-height:300px;
+}
+
+#visual .content-wrapper
+{
+    background:#313131 url("../images/visual.png") no-repeat center;
+}
+
+#body .content-wrapper
+{
+    background:url("../../images/bg-body.png") repeat-y left top;
+    padding-bottom:50px;
+}
+
+#customer
+{
+   min-height: inherit;
+   width: 205px;   
+   float:left;
+   background:url("../../images/bg-aside-title.png") no-repeat left top;
+}
+
+#main
+{
+   min-height: inherit;
+   width: 720px; /*755px-35px*/
+   padding-left:35px;
+   padding-top:45px;
+   float:left;
+}

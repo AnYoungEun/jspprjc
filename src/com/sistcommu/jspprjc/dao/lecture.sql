@@ -1,0 +1,1 @@
+select * from lectures where writer='NEWLEC' order by desc between 1 and 3;

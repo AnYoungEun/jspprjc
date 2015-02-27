@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.test1{
+		display:inline-block;
+		background:red;
+		width:100px;
+		height:100px;
+	}
+</style>
+<script src="../js/jquery-2.1.3.js"></script>
+<script>
+	window.onload = function(){
+		/* var btnAttr = document.getElementById("btn-attr");
+		var txt1 = document.getElementById("txt1"); */
+		
+		var txt1 = $("#txt1");
+		txt1.attr("value", "hello"); //attr로 속성변경
+		
+		 var btnAttr = $("#btnAttr");
+		 /* btnAttr.bind("click",function(){ //bind로 이벤트변경
+			alert("hello"); 
+			
+		}); */
+		
+		btnAttr.click(function(){
+			//이벤트에만 쓸거면 이게 더좋타
+			//alert($("#radio").prop("checked"));
+			//alert($("#radio").attr("value"));
+			//alert($("#radio").val());
+			//alert($("#name").html($("#name").html()+"오마이갓"));
+			$("#name").toggleClass("test1");
+		});
+		
+		$("#btn-trig").click(function(){
+			alert("trigger");
+			$("#btnAttr").trigger("click"); // alert뜨고 btnAttr를 클릭한것처럼 뜨게만든다
+		});
+		
+		/* $("input").on("click",function(){
+			alert("hello");
+			
+			var input = document.createElement("input");
+			input.type = "button";
+			input.value = "new one"
+			
+			document.body.appendChild(input);
+		}) */
+		$("#name").addClass("test");
+		
+		$("#btn-css").click(function(){
+			$("#name").css({
+				opacity:0.3,
+				width:"300px",
+				height:"300px"
+			});
+		});
+		
+		$("#btn-pos").click(function(){
+			var offs = $("#item").position();
+			alert("left:" + offs.left+",top:"+offs.top);
+		})
+		
+		$("#btn-mnp").click(function(){
+			var img = $("<img />")
+			img.attr("src", "pic1.jpg");
+			
+			img.appendTo("#box"); //어느 부모에 붙일거냐
+			//$("#box").append(img); //어느자식으로 붙일거냐
+			
+				img.css({
+				width:"100px",
+				height:"100px",
+			});
+			img
+			.animate({
+				width:"300px",
+				height:"300px"
+			},3000)
+			.animate({
+				width:"+=100px",
+				height:"300px"
+			},1000,function(){
+				$("#box").empty();
+			});
+		})
+	}
+</script>
+</head>
+<body>
+	
+	<p>
+		<input id="btnAttr" type="button" value="속성변경" />
+		<input id="btn-trig" type="button" value="트리거" />
+		<input id="btn-css" type="button" value="스타일변경" />
+		<input id="btn-pos" type="button" value="포지션" />
+		<input id="btn-mnp" type="button" value="어펜드" />
+	</p>
+	<p>
+	<input type="text" id="txt1" />
+	<input type="radio" id="radio" value="라디오버튼" checked="checked"/>라디오버튼
+	<span id="name">james</span>
+	<div id="box" style="width:500px;height:400px; background: yellow; position: relative;">
+		<div id="item" style="width:100px; height:100px; background: blue; position: absolute; left:50px; top:50px"></div>
+	</div>
+	</p>
+</body>
+</html>

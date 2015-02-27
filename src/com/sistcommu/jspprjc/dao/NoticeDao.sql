@@ -18,6 +18,7 @@ select isnull(max(cast(code as int)),0)+1 from notices;
 select * from NOTICES order by regdate desc;
 select * from ( select rownum num, N.* from (select * from NOTICES order by regdate desc) N ) where num between 11 and 20;
 
+--sql server
 select n.* from (select (row_number() over (order by regdate desc)) num, notices.* from notices) n where n.num between 1 and 10;
 select n.* from (select (row_number() over (order by regdate desc)) num, notices.* from notices) n where n.num between 1 and 10;
 select n.* from (select (row_number() over (order by regdate desc)) num, notices.* from notices) n where n.num in 5;

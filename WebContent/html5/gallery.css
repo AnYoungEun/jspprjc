@@ -13,6 +13,20 @@
 	overflow: hidden;
 }
 
+@keyframes slide-up{
+	from{
+	margin-top:25px;
+	}
+	
+	50%{
+	margin-top:50px;
+	}
+	
+	to{
+	margin-top:0px;
+	}
+}
+
 .gallery-show-box > img
 {
 	display:block;
@@ -29,8 +43,11 @@
 	transform: rotate(0deg);
 	
 	opacity:0.5;
-	transition-property:rotate, opacity, margin-top;
-	transition-duration:0s, 1s, 1s; /* 여러개 줄수있다 */
+	/* transition-property:rotate, opacity, margin-top; */
+	/* transition-duration:0s, 1s, 1s; */ /* 여러개 줄수있다 */
+	/* transition: 1s opacity ease-in-out, 1s margin-top cubic-bezier(0.32,-0.3,0.69, 1.35); 속도조절
+	transition:3s margin-top steps(3,end); 계단형, 동작/지연 end,start */
+	
 }
 
 .gallery-show-box>img:HOVER {
@@ -39,6 +56,10 @@
 	
 	opacity:1;
 	margin-top:0px; 
+	
+	animation-name:slide-up;
+	animation-duration:1s;
+	animation-timing-function:ease;
 }
 
 .gallery-pic-box

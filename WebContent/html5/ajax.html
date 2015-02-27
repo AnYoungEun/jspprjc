@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>영으니</title>
+<script>
+	window.onload = function() {
+		var btnReq = document.querySelector("#btn-req");
+		btnReq.onclick = function() {
+			alert("실행됨");
+			var oReq = new XMLHttpRequest();
+			if (oReq) {
+
+				oReq.onreadystatechange = function() {
+					if (oReq.readyState == 4) {
+
+						var data = eval(oReq.responseText);
+						alert(data[0].title);
+						console.log(oReq.statusText);
+					}
+				}
+
+				oReq.open("GET", "data.jsp", true); /* false면 동기 true면 비동기  */
+				oReq.send();
+				/* var data = eval(oReq.responseText);
+				  alert(data[0].id);
+				  console.log(oReq.statusText); */
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="요청" id="btn-req" />	
+</body>
+</html>
